@@ -1,0 +1,7 @@
+[Unit]
+Description=OS update triggered by added package sources
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sleep 5
+ExecStart=/usr/lib/update-from-added-sources/update-from-added-sources

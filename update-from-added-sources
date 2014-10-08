@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+
+lastfile=/var/update-from-added-sources/count
+count_last=$(test -r $lastfile && cat $lastfile || echo 0)
+count=$(find /etc/apt -type f -path \*sources.list\* | xargs cat | wc -l)
+mkdir -p $(dirname $lastfile)
+echo $count >$lastfile
+
+if [ $count -le $count_last ]; then
+	# Sources changed but weren't added
+	exit 0
+fi
+
+apt-get -q -y update
+apt-get -qq dist-upgrade
+apt-get -qq autoremove
+apt-get -qq clean

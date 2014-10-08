@@ -1,0 +1,8 @@
+[Unit]
+Description=Watch sources.list.d for added package sources
+
+[Path]
+PathChanged=/etc/apt/sources.list.d
+
+[Install]
+WantedBy=multi-user.target

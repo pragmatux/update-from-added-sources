@@ -1,12 +1,12 @@
-Source: auto-update-from-added-sources
-Section: unknown
+Source: update-from-added-sources
+Section: embedded
 Priority: extra
 Maintainer: Ryan Kuester <rkuester@insymbols.com>
-Build-Depends: debhelper (>= 8.0.0)
+Build-Depends: debhelper (>= 8.0.0), dh-systemd
 Standards-Version: 3.9.3
 
-Package: auto-update-from-added-sources
+Package: update-from-added-sources
 Architecture: all
 Depends: ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: Update from added package sources automatically
+ Update from added package sources automatically.

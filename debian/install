@@ -1,0 +1,2 @@
+update-from-added-sources.* /lib/systemd/system/
+update-from-added-sources /usr/lib/update-from-added-sources
