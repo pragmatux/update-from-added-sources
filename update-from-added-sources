@@ -13,6 +13,6 @@ if [ $count -le $count_last ]; then
 fi
 
 apt-get -q -y update
-apt-get -qq dist-upgrade
+apt-get -qq --allow-unauthenticated dist-upgrade
 apt-get -qq autoremove
 apt-get -qq clean
