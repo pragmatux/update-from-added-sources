@@ -4,6 +4,8 @@ Priority: extra
 Maintainer: Ryan Kuester <rkuester@insymbols.com>
 Build-Depends: debhelper (>= 8.0.0), dh-systemd
 Standards-Version: 3.9.3
+Vcs-Git: https://github.com/pragmatux/update-from-added-sources.git
+Vcs-Browser: https://github.com/pragmatux/update-from-added-sources
 
 Package: update-from-added-sources
 Architecture: all
